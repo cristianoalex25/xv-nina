@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>XV de Nina • Edição Especial | Confirmação de Presença</title>
+
+  <!-- Metatags para pré-visualização no WhatsApp e redes sociais (Estilo Bridgerton) -->
+  <meta property="og:title" content="O Evento da Temporada: XV de Nina">
+  <meta property="og:description" content="Querido e gentil leitor: Você foi cordialmente convidado para o jantar intimista de 15 anos da Nina. Confirme sua presença para esta noite memorável!">
+  <meta property="og:image" content="bridgerton-art.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#7EA0B7">
+
+  <!-- Google Fonts: Cinzel, Cormorant Garamond, Pinyon Script & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bridgerton-theme">
+  <!-- Efeitos de iluminação Regency -->
+  <div class="ambient-glow glow-blue"></div>
+  <div class="ambient-glow glow-wisteria"></div>
+  <div class="ambient-glow glow-gold"></div>
+
+  <main class="page-container">
+    <div class="card-container regency-card">
+      
+      <!-- Imagem de Destaque / Banner Floral Bridgerton -->
+      <div class="banner-wrapper">
+        <img src="bridgerton-art.jpg" alt="Arranjo Floral Bridgerton com Glicínias e Rosas Inglesas" class="banner-image">
+        <div class="banner-overlay"></div>
+        <div class="wax-seal">
+          <span class="wax-monogram">N</span>
+        </div>
+      </div>
+
+      <!-- Cabeçalho Estilo 'Lady Whistledown Society Paper' -->
+      <header class="event-header">
+        <div class="society-badge">
+          <span class="society-line"></span>
+          <span class="society-title">EDIÇÃO ESPECIAL</span>
+          <span class="society-line"></span>
+        </div>
+
+        <span class="sub-label">O DIAMANTE DA TEMPORADA</span>
+        <h1 class="main-title">XV <span class="title-sub">DE</span></h1>
+        <h2 class="name-script">Nina</h2>
+
+        <div class="ornament-divider">
+          <span class="line"></span>
+          <span class="filigree-center">✦</span>
+          <span class="line"></span>
+        </div>
+
+        <div class="event-date-box">
+          <span class="date-text">SEXTA-FEIRA, 18 DE SETEMBRO DE 2026</span>
+        </div>
+
+        <div class="whistledown-quote">
+          <p class="quote-salutation">Querido e gentil leitor,</p>
+          <p class="quote-body">
+            É com imensa alegria e requinte que a alta sociedade anuncia a mais encantadora celebração do ano. Preparamos uma noite memorável e acolhedora: um <em>jantar intimista</em> para celebrarmos e desfrutarmos juntas este momento inesquecível da nossa querida Nina.
+          </p>
+          <span class="quote-signature">— Sua presença é uma honra indispensável.</span>
+        </div>
+      </header>
+
+      <!-- Formulário de RSVP Bridgerton -->
+      <form id="rsvpForm" class="rsvp-form" novalidate>
+        
+        <!-- Campo: Nome Completo -->
+        <div class="form-group">
+          <label for="guestName" class="form-label">
+            Nome Completo da Convidada / Convidado <span class="required">*</span>
+          </label>
+          <input 
+            type="text" 
+            id="guestName" 
+            name="guestName" 
+            class="form-input" 
+            placeholder="Como consta na lista da sociedade"
+            required
+            autocomplete="name"
+          >
+          <span class="field-hint">Convite individual.</span>
+        </div>
+
+        <!-- Campo: Confirmação de Presença com Cards Nobres -->
+        <div class="form-group">
+          <label class="form-label">
+            Vossa Senhoria honrará com sua presença? <span class="required">*</span>
+          </label>
+          <div class="choice-cards-grid">
+            <label class="choice-card" for="attendYes">
+              <input type="radio" id="attendYes" name="attendance" value="Sim" required>
+              <div class="choice-content">
+                <span class="choice-icon">👑</span>
+                <span class="choice-title">Aceito com honra!</span>
+                <span class="choice-desc">Estarei presente para desfrutar desta noite</span>
+              </div>
+            </label>
+
+            <label class="choice-card" for="attendNo">
+              <input type="radio" id="attendNo" name="attendance" value="Nao" required>
+              <div class="choice-content">
+                <span class="choice-icon">📜</span>
+                <span class="choice-title">Envio meus pesares</span>
+                <span class="choice-desc">Infelizmente não poderei comparecer</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Seção Condicional: Banquete e Detalhes do Jantar -->
+        <div id="dinnerDetailsSection" class="dinner-section hidden">
+          <div class="section-divider">
+            <span class="filigree-small">✤</span>
+            <span>BANQUETE & PREFERÊNCIAS DO JANTAR</span>
+            <span class="filigree-small">✤</span>
+          </div>
+
+          <!-- Campo: Restrições Alimentares -->
+          <div class="form-group">
+            <label for="dietaryRequirement" class="form-label">
+              Possui alguma restrição ou preferência gastronômica? <span class="required">*</span>
+            </label>
+            <select id="dietaryRequirement" name="dietaryRequirement" class="form-select" required>
+              <option value="" disabled selected>Selecione sua preferência</option>
+              <option value="Nenhuma">Sem restrições gastronômicas</option>
+              <option value="Vegetariano">Menu Vegetariano</option>
+              <option value="Vegano">Menu Vegano</option>
+              <option value="Intolerancia a Lactose">Intolerância à Lactose</option>
+              <option value="Sem Gluten (Celiaco)">Intolerância ao Glúten (Celíaco)</option>
+              <option value="Outra">Outra restrição ou alergia (especificar)</option>
+            </select>
+          </div>
+
+          <!-- Detalhe da restrição caso selecione "Outra" -->
+          <div id="otherDietaryGroup" class="form-group hidden">
+            <label for="dietaryDetail" class="form-label">
+              Por favor, especifique sua restrição ou alergia:
+            </label>
+            <input 
+              type="text" 
+              id="dietaryDetail" 
+              name="dietaryDetail" 
+              class="form-input" 
+              placeholder="Ex: Alergia a frutos do mar, nozes, etc."
+            >
+          </div>
+        </div>
+
+        <!-- Campo: WhatsApp de Contato -->
+        <div class="form-group">
+          <label for="guestPhone" class="form-label">
+            WhatsApp para Correspondência <span class="required">*</span>
+          </label>
+          <input 
+            type="tel" 
+            id="guestPhone" 
+            name="guestPhone" 
+            class="form-input" 
+            placeholder="(DD) 99999-9999"
+            required
+            maxlength="15"
+          >
+          <span class="field-hint">Para o envio da localização e do convite.</span>
+        </div>
+
+        <!-- Campo: Recado Especial -->
+        <div class="form-group">
+          <label for="guestMessage" class="form-label">
+            Votos e Palavras Afetuosas para a Nina <span class="optional">(opcional)</span>
+          </label>
+          <textarea 
+            id="guestMessage" 
+            name="guestMessage" 
+            class="form-textarea" 
+            rows="3" 
+            placeholder="Deixe uma mensagem especial que ficará guardada no livro de recordações do nosso Diamante..."
+          ></textarea>
+        </div>
+
+        <!-- Botão de Envio Estilo Selo Real -->
+        <button type="submit" id="submitBtn" class="btn-submit btn-regency">
+          <span class="btn-text">Confirmar na Lista da Sociedade</span>
+          <span class="btn-icon">✨</span>
+          <div class="spinner hidden"></div>
+        </button>
+
+        <p id="formError" class="form-error-msg hidden"></p>
+      </form>
+
+      <!-- Tela de Sucesso / Confirmação Nobre -->
+      <div id="successCard" class="success-card hidden">
+        <div class="success-wax-seal">
+          <span class="seal-inner">👑</span>
+        </div>
+        <h3 class="success-title" id="successHeading">Presença Confirmada com Honra!</h3>
+        <p class="success-message" id="successBody">
+          Vossa resposta foi devidamente registrada nas crônicas oficiais. Estamos preparando cada detalhe deste jantar intimista com imenso carinho para desfrutarmos juntas.
+        </p>
+
+        <div class="event-summary-badge">
+          <div class="summary-row">
+            <span class="summary-label">Data Oficial:</span>
+            <span class="summary-value">18 de Setembro de 2026</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Celebração:</span>
+            <span class="summary-value">Jantar Intimista • XV do Diamante Nina</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Traje:</span>
+            <span class="summary-value">Elegante & Confortável</span>
+          </div>
+        </div>
+
+        <div class="success-actions">
+          <button id="addToCalendarBtn" class="btn-secondary">
+            📅 Adicionar à Minha Agenda Real
+          </button>
+          
+          <button id="editResponseBtn" class="btn-text-link">
+            Retificar minha resposta
+          </button>
+        </div>
+      </div>
+
+      <!-- Rodapé Regency -->
+      <footer class="card-footer">
+        <p class="footer-tagline">“A celebração mais esperada da temporada.”</p>
+        <p class="footer-copyright">XV DA NINA • 18 / 09 / 2026</p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
