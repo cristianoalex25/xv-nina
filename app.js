@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (data.presenca === 'Confirmado') {
       successHeading.textContent = 'Presença Confirmada com Honra! ✨';
-      successBody.textContent = `É uma imensa honra registrar vossa presença, ${firstName}! O Diamante Nina e sua família aguardam você para desfrutarmos juntas este jantar memorável e acolhedor.`;
+      successBody.textContent = `É uma imensa honra registrar vossa presença, ${firstName}! O Diamante Nina e sua família aguardam você para desfrutarmos juntos(as) este jantar memorável e acolhedor.`;
       addToCalendarBtn.classList.remove('hidden');
     } else {
       successHeading.textContent = 'Vosso Recado Foi Registrado 💌';
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 7. Adicionar à Agenda Real (.ICS / Google Calendar)
   addToCalendarBtn.addEventListener('click', () => {
     const title = 'Jantar Intimista • XV de Nina';
-    const description = 'Querido e gentil leitor: Uma noite especial e intimista para estarmos juntas ao redor de um jantar acolhedor e boa música.';
+    const description = 'Querido(a) e gentil leitor(a): Uma noite especial e intimista para estarmos juntos(as) ao redor de um jantar acolhedor e boa música.';
     const location = 'Local informado no convite';
     const startDate = '20260918T223000Z'; // 18/09/2026 19:30 BRT = 22:30 UTC
     const endDate = '20260919T023000Z';   // 18/09/2026 23:30 BRT = 02:30 UTC
