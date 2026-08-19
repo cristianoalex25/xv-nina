@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Cole aqui a URL do seu Google Apps Script quando configurado (veja COMO_PUBLICAR.md)
   // Se deixado vazio, o formulário salvará em modo demonstração no navegador.
   // =========================================================================
-  const GOOGLE_SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycb.../exec'; 
+  const GOOGLE_SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbywQ-2DBUYyEhV850q4ow1lTdEC9TKN95YgftAJgcMhgJory6v99x0Q8ROrrtRB094WPA/exec'; 
 
   // Elementos do DOM
   const form = document.getElementById('rsvpForm');
