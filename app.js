@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Cole aqui a URL do seu Google Apps Script quando configurado (veja COMO_PUBLICAR.md)
   // Se deixado vazio, o formulário salvará em modo demonstração no navegador.
   // =========================================================================
-  const GOOGLE_SHEETS_ENDPOINT = ''; 
+  const GOOGLE_SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycb.../exec'; 
 
   // Elementos do DOM
   const form = document.getElementById('rsvpForm');
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         await fetch(GOOGLE_SHEETS_ENDPOINT, {
           method: 'POST',
           mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify(payload)
         });
       } else {
